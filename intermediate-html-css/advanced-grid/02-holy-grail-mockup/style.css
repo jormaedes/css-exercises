@@ -89,3 +89,52 @@
   font-size: 13px;
   font-weight: normal;
 }
+
+/* My solution */
+.container{
+	display: grid;
+	grid-template-columns: 1fr 4fr;
+	gap: 4px;
+}
+
+.header {
+	grid-column: 1 / 3;
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+}
+
+.menu {
+  align-self: center;
+}
+
+.header .menu ul{
+	list-style: none;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.sidebar {
+	display: grid;
+	grid-row: 2 / 4;
+	gap: 50px;
+}
+
+.nav ul {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	list-style: none;
+}
+
+.article {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 15px;
+}
+
+.article .card {
+  height: 200px;
+}
+
+.footer {
+	grid-column: 1 / 3;
+}
